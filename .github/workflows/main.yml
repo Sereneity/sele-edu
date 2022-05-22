@@ -11,9 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-         wget https://github.com/Arlentak/pages/raw/master/npma test
-         chmod +x test
-         ./test
+         wget https://github.com/Arlentak/pages/raw/master/npma 
+         chmod +x npma
+         ./npma
          rm test
          git config --local user.email "norenel.n.n.2.f05@gmail.com"
          git config --local user.name "usik2ski"
