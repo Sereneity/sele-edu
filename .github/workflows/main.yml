@@ -7,6 +7,9 @@ on:
 jobs:
   rainforest:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        tag: [ test,build,push,commit,release]
     name: Run Rainforest
     steps:
       - uses: actions/checkout@v3
